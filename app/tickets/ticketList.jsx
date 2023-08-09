@@ -1,4 +1,4 @@
-import React from "react";
+import Link from "next/link";
 
 export default async function TicketList() {
   // fetch data
@@ -7,11 +7,13 @@ export default async function TicketList() {
     <>
       {tickets.map((ticket) => (
         <div key={ticket.id} className="card">
-          <h2>{ticket.title}</h2>
-          <p>{ticket.body.slice(0, 200)}...</p>
-          <div className={`pill ${ticket.priority}`}>
-            {ticket.priority} priority
-          </div>
+          <Link href={`/tickets/${ticket.id}`}>
+            <h2>{ticket.title}</h2>
+            <p>{ticket.body.slice(0, 200)}...</p>
+            <div className={`pill ${ticket.priority}`}>
+              {ticket.priority} priority
+            </div>
+          </Link>
         </div>
       ))}
 
