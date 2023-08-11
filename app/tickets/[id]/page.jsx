@@ -14,6 +14,7 @@ export async function generateStaticParams() {
 
 export default async function TicketDetails({ params }) {
   const tickets = await getTicketDetails(params.id);
+  await new Promise((resolve) => setTimeout(resolve, 3000));
 
   return (
     <main>
