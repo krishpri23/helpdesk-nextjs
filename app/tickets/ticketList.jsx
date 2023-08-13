@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export default async function TicketList() {
-  await new Promise((resolve) => setTimeout(resolve, 3000));
+  // await new Promise((resolve) => setTimeout(resolve, 3000));
   // fetch data
   const tickets = await getTickets();
   return (
