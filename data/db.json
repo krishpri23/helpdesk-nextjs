@@ -23,73 +23,10 @@
     },
     {
       "title": "new ticket",
-      "body": "hello",
-      "priority": "",
-      "user_email": "kp@yahoo.com",
-      "id": "Kn_6YxI"
-    },
-    {
-      "title": "new ticket",
-      "body": "hello",
-      "priority": "",
-      "user_email": "kp@yahoo.com",
-      "id": "0bArdE3"
-    },
-    {
-      "title": "New ticket",
-      "body": "hello ",
-      "priority": "",
-      "user_email": "kp@yahoo.com",
-      "id": "xShjNCS"
-    },
-    {
-      "title": "new ticket",
-      "body": "hello",
-      "priority": "",
-      "user_email": "kp@yahoo.com",
-      "id": "c8AYuCp"
-    },
-    {
-      "title": "new ticket",
-      "body": "hello",
-      "priority": "",
-      "user_email": "kp@yahoo.com",
-      "id": "BB5d7kN"
-    },
-    {
-      "title": "asd",
-      "body": "324",
-      "priority": "",
-      "user_email": "kp@yahoo.com",
-      "id": "cWaZHmb"
-    },
-    {
-      "title": "new ticket",
-      "body": "hello",
+      "body": "new tickeyt",
       "priority": "low",
       "user_email": "mario@netninja.dev",
-      "id": "EzhEmiT"
-    },
-    {
-      "title": "new ticket",
-      "body": "new ",
-      "priority": "low",
-      "user_email": "mario@netninja.dev",
-      "id": "ZKCJiXQ"
-    },
-    {
-      "title": "new tick",
-      "body": "new",
-      "priority": "low",
-      "user_email": "mario@netninja.dev",
-      "id": "37w9WTW"
-    },
-    {
-      "title": "new ticket",
-      "body": "new tick",
-      "priority": "low",
-      "user_email": "mario@netninja.dev",
-      "id": "w1UH4aE"
+      "id": "T7LirvK"
     }
   ]
 }

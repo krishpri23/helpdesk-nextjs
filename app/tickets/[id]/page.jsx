@@ -36,11 +36,14 @@ export default async function TicketDetails({ params }) {
 }
 
 export const getTicketDetails = async (id) => {
-  const res = await fetch("http://localhost:4000/tickets/" + id, {
-    next: {
-      revalidate: 60, // reload after 60 seconds
-    },
-  });
+  const res = await fetch(
+    "http://localhost:4000/tickets/" + id
+    // {
+    //   next: {
+    //     revalidate: 60, // reload after 60 seconds
+    //   },
+    // }
+  );
   if (!res.ok) {
     notFound();
   }

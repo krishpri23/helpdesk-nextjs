@@ -22,11 +22,14 @@ export default function CreateForm() {
       user_email: "mario@netninja.dev",
     };
 
+    // * Sending a post request to fake json server and saving the data to data/db.json file
+
     const res = await fetch("http://localhost:4000/tickets", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newTicket),
     });
+
     console.log(newTicket);
 
     if (res.status === 201) {
