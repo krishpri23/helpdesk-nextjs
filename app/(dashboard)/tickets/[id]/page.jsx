@@ -1,7 +1,15 @@
 import { notFound } from "next/navigation";
 
-// * To increase performance, params are statically generated. This only works if `revalidate` is specified
-// * All pages are pre rendered with the static paramas.
+export async function generateMetadata({ params }) {
+  const { id } = params;
+
+  const res = await fetch(`http://localhost:4000/tickets/${id}`);
+  const tickets = await res.json();
+
+  return {
+    title: `Helpdesk   ${tickets.title}`,
+  };
+}
 
 export async function generateStaticParams() {
   const res = await fetch("http://localhost:4000/tickets");
@@ -11,6 +19,9 @@ export async function generateStaticParams() {
     id: ticket.id,
   }));
 }
+
+// * To increase performance, params are statically generated. This only works if `revalidate` is specified
+// * All pages are pre rendered with the static paramas.
 
 export default async function TicketDetails({ params }) {
   const tickets = await getTicketDetails(params.id);
@@ -29,7 +40,7 @@ export default async function TicketDetails({ params }) {
           <div className={`pill ${tickets.priority}`}>
             {tickets.priority} priority
           </div>
-        </div> 
+        </div>
       )}
     </main>
   );
