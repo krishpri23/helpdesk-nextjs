@@ -1,4 +1,4 @@
-import TicketForm from "@/app/tickets/create/ticketForm";
+import TicketForm from "@/app/(dashboard)/tickets/create/ticketForm";
 import React from "react";
 
 export default function CreateTicket() {

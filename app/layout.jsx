@@ -1,8 +1,14 @@
+// Reason for having the layout outside of dashboard folder structure is to apply font styles & css files throughtout the app.
+// Creating layouts for each route separately to have their own layouts
+
 import "./globals.css";
-import { Rubik } from "next/font/google";
+import { Ubuntu } from "next/font/google";
 import Navbar from "./components/navbar";
 
-const rubik = Rubik({ subsets: ["latin"] });
+const ubuntu = Ubuntu({
+  weight: ["300", "500", "700"],
+  subsets: ["latin"],
+});
 
 export const metadata = {
   title: "Create Next App",
@@ -12,9 +18,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={rubik.className}>
-        <Navbar />
-        {children}
+      <body className={ubuntu.className}>
+        {/* page compononent */}
+        {children}{" "}
       </body>
     </html>
   );

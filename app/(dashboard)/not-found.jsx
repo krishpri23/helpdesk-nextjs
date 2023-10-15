@@ -11,4 +11,5 @@ export default function NotFound() {
   );
 }
 
-// not-found - naming convention for file, NotFound() for function
+// not-found - naming convention for file, NotFound() for function.
+// It should ideally work but now it is not working. Fix: create catch-all routes

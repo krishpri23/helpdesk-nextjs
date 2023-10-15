@@ -29,7 +29,7 @@ export default async function TicketDetails({ params }) {
           <div className={`pill ${tickets.priority}`}>
             {tickets.priority} priority
           </div>
-        </div>
+        </div> 
       )}
     </main>
   );
