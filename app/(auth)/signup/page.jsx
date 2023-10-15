@@ -1,14 +1,40 @@
 "use client";
+import { useState } from "react";
 import AuthForm from "../AuthForm";
+import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
+import { useRouter } from "next/navigation";
 
 export default function SignupPage() {
+  const [formError, setFormError] = useState("");
+  const router = useRouter();
+
   const handleSubmit = async (e, email, password) => {
     e.preventDefault();
-    console.log(`SIGN UP :${email}, ${password}`);
+    console.log(email, password);
+
+    const supabase = createClientComponentClient();
+
+    const { error } = await supabase.auth.signUp({
+      email,
+      password,
+      // location.origin returns the main part of url, callback handles email verification
+      options: {
+        emailRedirectTo: `${location.origin}/api/auth/callback`,
+      },
+    });
+
+    if (formError) {
+      setFormError(error.message);
+    }
+
+    if (!formError) {
+      router.push("/verify");
+    }
   };
   return (
     <main>
       <h2> Signup</h2>
+      {formError && <p> Sorry, unable to sign up. {formError} </p>}
       <AuthForm handleSubmit={handleSubmit} />
     </main>
   );

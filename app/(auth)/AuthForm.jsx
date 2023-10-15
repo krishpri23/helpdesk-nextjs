@@ -2,13 +2,15 @@
 
 import React, { useState } from "react";
 
-export default function AuthForm() {
+export default function AuthForm({ handleSubmit }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   return (
     <section>
-      <form>
+      {/* passing email & password props to handle the submission */}
+      <form onSubmit={(e) => handleSubmit(e, email, password)}>
+        {" "}
         <input
           type="text"
           name="email"
