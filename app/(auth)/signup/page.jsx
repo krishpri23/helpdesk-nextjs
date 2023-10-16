@@ -23,11 +23,11 @@ export default function SignupPage() {
       },
     });
 
-    if (formError) {
+    if (error) {
       setFormError(error.message);
     }
 
-    if (!formError) {
+    if (!error) {
       router.push("/verify");
     }
   };

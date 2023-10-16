@@ -12,7 +12,7 @@ export default async function TicketList() {
         <div key={ticket.id} className="card">
           <Link href={`/tickets/${ticket.id}`}>
             <h2>{ticket.title}</h2>
-            <p>{ticket.body.slice(0, 200)}...</p>
+            <p>{ticket.body}...</p>
             <div className={`pill ${ticket.priority}`}>
               {ticket.priority} priority
             </div>
